@@ -7,6 +7,7 @@ class Bank
     static int proximoNumeroConta = 1;
     static ContaCliente contaLogada = null;
 
+
     static void ExibirNomeDaMosten()
     {
         Console.WriteLine(@"
@@ -56,7 +57,12 @@ class Bank
 
         } while (opcao != 0);
     }
-
+    static void LimpezaConsole()
+    {
+        Console.WriteLine("Voltando ao menu de opcões...");
+        Thread.Sleep(4000);
+        Console.Clear();
+    }
     static void CriarConta()
     {
         Console.Write("Nome do titular: ");
@@ -112,7 +118,8 @@ class Bank
             Console.WriteLine("1 - Depositar");
             Console.WriteLine("2 - Sacar");
             Console.WriteLine("3 - Ver Saldo");
-            Console.WriteLine("4 - Logout");
+            Console.WriteLine("4 - Ver Dinheiro Sacado");
+            Console.WriteLine("5 - Logout");
             Console.Write("Escolha uma opção: ");
 
             if (!int.TryParse(Console.ReadLine(), out opcao))
@@ -131,15 +138,22 @@ class Bank
                     break;
                 case 3:
                     contaLogada.MostrarDados();
-                    Thread.Sleep(6000);
-                    Console.Clear();
+                    LimpezaConsole();
                     break;
                 case 4:
+                    ValorSacado();
+                    break;
+                case 5:
                     Console.WriteLine("Logout realizado com sucesso.");
                     contaLogada = null;
+                    Console.WriteLine("Voltando ao menu de opcões...");
+                    Thread.Sleep(4000);
+                    Console.Clear();
                     break;
+
                 default:
                     Console.WriteLine("Opção inválida.");
+                    LimpezaConsole();
                     break;
             }
 
@@ -156,6 +170,15 @@ class Bank
             return;
         }
         contaLogada.Depositar(valor);
+        LimpezaConsole();
+    }
+
+    static void ValorSacado()
+    {
+        Console.Clear();
+        Console.Write($"\nValor que você sacou: R$ {contaLogada.Sacado}\n.");
+        LimpezaConsole();
+        MenuContaLogada();
     }
 
     static void Sacar()
@@ -167,6 +190,7 @@ class Bank
             return;
         }
         contaLogada.Sacar(valor);
+        LimpezaConsole();
     }
 
 }

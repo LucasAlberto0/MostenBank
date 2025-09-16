@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MostenBank")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9b34a1d3396701fd17e1ea742bce0188fa43903")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28797de4547b5d9d3c5fc68b57cf4108aa45099e")]
 [assembly: System.Reflection.AssemblyProductAttribute("MostenBank")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MostenBank")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -5,6 +5,7 @@ class ContaCliente
     public string Usuario { get; private set; }
     public string Senha { get; private set; }
     public decimal Saldo { get; private set; }
+    public decimal Sacado { get; private set; }
 
     public ContaCliente(int numero, string titular, string usuario, string senha)
     {
@@ -13,6 +14,7 @@ class ContaCliente
         Usuario = usuario;
         Senha = senha;
         Saldo = 0;
+        Sacado = 0;
     }
 
     public bool VerificarSenha(string senha)
@@ -28,7 +30,8 @@ class ContaCliente
             return;
         }
         Saldo += valor;
-        Console.WriteLine($"Depósito de R$ {valor} realizado com sucesso.");
+        Console.WriteLine($"\nDepósito de R$ {valor} realizado com sucesso.\n");
+        Thread.Sleep(1000);
     }
 
     public void Sacar(decimal valor)
@@ -44,7 +47,9 @@ class ContaCliente
             return;
         }
         Saldo -= valor;
-        Console.WriteLine($"Saque de R$ {valor} realizado com sucesso.");
+        Console.WriteLine($"\nSaque de R$ {valor} realizado com sucesso.\n");
+        Sacado += valor++;
+        Thread.Sleep(1000);
     }
 
     public void MostrarDados()
