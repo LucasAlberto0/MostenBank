@@ -1,0 +1,15 @@
+C:\Users\Mosten\Desktop\Projects\MostenBank\obj\Debug\net9.0\MostenBank.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mosten\Desktop\Projects\MostenBank\obj\Debug\net9.0\MostenBank.AssemblyInfoInputs.cache
+C:\Users\Mosten\Desktop\Projects\MostenBank\obj\Debug\net9.0\MostenBank.AssemblyInfo.cs
+C:\Users\Mosten\Desktop\Projects\MostenBank\obj\Debug\net9.0\MostenBank.csproj.CoreCompileInputs.cache
+C:\Users\Mosten\Desktop\Projects\MostenBank\obj\Debug\net9.0\MostenBank.sourcelink.json
+C:\Users\Mosten\Desktop\Projects\MostenBank\bin\Debug\net9.0\MostenBank.exe
+C:\Users\Mosten\Desktop\Projects\MostenBank\bin\Debug\net9.0\MostenBank.deps.json
+C:\Users\Mosten\Desktop\Projects\MostenBank\bin\Debug\net9.0\MostenBank.runtimeconfig.json
+C:\Users\Mosten\Desktop\Projects\MostenBank\bin\Debug\net9.0\MostenBank.dll
+C:\Users\Mosten\Desktop\Projects\MostenBank\bin\Debug\net9.0\MostenBank.pdb
+C:\Users\Mosten\Desktop\Projects\MostenBank\obj\Debug\net9.0\MostenBank.dll
+C:\Users\Mosten\Desktop\Projects\MostenBank\obj\Debug\net9.0\refint\MostenBank.dll
+C:\Users\Mosten\Desktop\Projects\MostenBank\obj\Debug\net9.0\MostenBank.pdb
+C:\Users\Mosten\Desktop\Projects\MostenBank\obj\Debug\net9.0\MostenBank.genruntimeconfig.cache
+C:\Users\Mosten\Desktop\Projects\MostenBank\obj\Debug\net9.0\ref\MostenBank.dll
