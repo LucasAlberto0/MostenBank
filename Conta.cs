@@ -54,7 +54,7 @@ class ContaCliente
 
     public void MostrarDados()
     {
-        Console.WriteLine($"Conta: {Numero} | Titular: {Titular} | Saldo: R$ {Saldo}");
+        Console.WriteLine($"\nConta: {Numero} | Titular: {Titular} | Saldo: R$ {Saldo}\n");
     }
 
 }

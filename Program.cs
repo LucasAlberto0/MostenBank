@@ -29,7 +29,7 @@ class Bank
 
             Console.WriteLine("1 - Criar Conta");
             Console.WriteLine("2 - Login");
-            Console.WriteLine("0 - Sai");
+            Console.WriteLine("0 - Sair");
             Console.Write("Escolha uma opção: ");
 
             if (!int.TryParse(Console.ReadLine(), out opcao))
@@ -102,7 +102,7 @@ class Bank
             return;
         }
 
-        Console.WriteLine($"nBem-vindo, {contaLogada.Titular}!");
+        Console.WriteLine($"\nBem-vindo, {contaLogada.Titular}!");
         Console.WriteLine("Aguarde um momento...");
         Thread.Sleep(4000);
         Console.Clear();
@@ -144,9 +144,9 @@ class Bank
                     ValorSacado();
                     break;
                 case 5:
-                    Console.WriteLine("Logout realizado com sucesso.");
+                    Console.WriteLine("\nLogout realizado com sucesso.");
                     contaLogada = null;
-                    Console.WriteLine("Voltando ao menu de opcões...");
+                    Console.WriteLine("\nVoltando ao menu de Cadastro/Login...");
                     Thread.Sleep(4000);
                     Console.Clear();
                     break;
@@ -163,7 +163,7 @@ class Bank
     static void Depositar()
     {
         Console.Clear();
-        Console.Write("Valor para depósito: R$ ");
+        Console.Write("\nValor para depósito: R$ ");
         if (!decimal.TryParse(Console.ReadLine(), out decimal valor))
         {
             Console.WriteLine("Valor inválido.");
@@ -176,14 +176,14 @@ class Bank
     static void ValorSacado()
     {
         Console.Clear();
-        Console.Write($"\nValor que você sacou: R$ {contaLogada.Sacado}\n.");
+        Console.Write($"\nValor que você sacou: R$ {contaLogada.Sacado}.\n");
         LimpezaConsole();
         MenuContaLogada();
     }
 
     static void Sacar()
     {
-        Console.Write("Valor para saque: R$ ");
+        Console.Write("\nValor para saque: R$ ");
         if (!decimal.TryParse(Console.ReadLine(), out decimal valor))
         {
             Console.WriteLine("Valor inválido.");
