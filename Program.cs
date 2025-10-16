@@ -35,6 +35,7 @@ class Bank
             if (!int.TryParse(Console.ReadLine(), out opcao))
             {
                 Console.WriteLine("Entrada inválida.");
+                Thread.Sleep(4000);
                 continue;
             }
 
@@ -55,7 +56,7 @@ class Bank
                     break;
             }
 
-        } while (opcao != 0);
+        } while (opcao != 2);
     }
     static void LimpezaConsole()
     {
@@ -79,6 +80,23 @@ class Bank
 
         Console.Write("Senha: ");
         string senha = Console.ReadLine();
+        Console.Write("Confirme a senha: ");
+        string confirmeASenha = Console.ReadLine();
+
+        if (senha?.Length <= 8)
+        {
+            Console.WriteLine("Sua senha está curta!");
+            Thread.Sleep(2000);
+            LimpezaConsole();
+            return;
+        }
+        
+        if (senha != confirmeASenha)
+        {
+            Console.WriteLine("As senhas não conbinam!");
+            Thread.Sleep(2000);
+            return;
+        }
 
         var conta = new ContaCliente(proximoNumeroConta++, titular, usuario, senha);
         contas.Add(conta);
@@ -101,6 +119,7 @@ class Bank
             Console.WriteLine("Usuário ou senha incorretos.");
             return;
         }
+
 
         Console.WriteLine($"\nBem-vindo, {contaLogada.Titular}!");
         Console.WriteLine("Aguarde um momento...");
@@ -156,7 +175,6 @@ class Bank
                     LimpezaConsole();
                     break;
             }
-
         } while (contaLogada != null && opcao != 4);
     }
 
